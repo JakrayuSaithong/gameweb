@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="container-game">
+    <h1>Game</h1>
+    <div id="top-drop">
+      <div class="box-draggable" id="box-draggable">
+        <div class="list" id="electrical-isolation">Electrical isolation</div>
+        <div class="list" id="circuit-breaker">circuit breaker</div>
+        <div class="list" id="transformer">Transformer</div>
+        <div class="list" id="prefabricated-substation">Prefabricated substation</div>
+        <div class="list" id="data-center">Data Center</div>
+        <div class="list" id="solar-cell">Solar cell</div>
+        <div class="list" id="busduct">busduct</div>
+        <div class="list" id="generator">Generator</div>
+        <div class="list" id="ats">Automatic Transfer Switch (ATS)</div>
+        <div class="list" id="powermeter">Power Meter</div>
+      </div>
+    </div>
+
+    <div class="drop-box">
+      <div class="botton-drop" id="electrical-isolation">
+        <i class='bx bx-question-mark' onclick="openpopup(0)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+      <div class="botton-drop" id="circuit-breaker">
+        <i class='bx bx-question-mark' onclick="openpopup(1)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+      <div class="botton-drop" id="transformer">
+        <i class='bx bx-question-mark' onclick="openpopup(2)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+      <div class="botton-drop" id="prefabricated-substation">
+        <i class='bx bx-question-mark' onclick="openpopup(3)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+      <div class="botton-drop" id="data-center">
+        <i class='bx bx-question-mark' onclick="openpopup(4)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+      <div class="botton-drop" id="solar-cell">
+        <i class='bx bx-question-mark' onclick="openpopup(5)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+      <div class="botton-drop busduct" id="busduct" >
+        <i class='bx bx-question-mark' onclick="openpopup(6)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+      <div class="botton-drop" id="generator">
+        <i class='bx bx-question-mark' onclick="openpopup(7)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+      <div class="botton-drop" id="ats">
+        <i class='bx bx-question-mark' onclick="openpopup(8)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+      <div class="botton-drop" id="powermeter">
+        <i class='bx bx-question-mark' onclick="openpopup(9)"></i>
+        <i class='bx bx-x bx-x1'></i>
+      </div>
+    </div>
+
+    <div id="popupContainer" class="popup-container">
+      <i class='bx bx-x' id="closeButton" onclick="closePopup()"></i>
+      <div class="text-popup">
+          <img src="images/confused.gif" alt="">
+          <p>the separation between two circuits that restricts the direct current (DC) and any unwanted alternating current (AC) in a power supply.</p>
+      </div>
+      <div class="text-popup">
+        <img src="images/confused.gif" alt="">
+        <p>A safety device that stops the flow of current in an electrical circuit when there is a fault.</p>
+      </div>
+      <div class="text-popup">
+        <img src="images/confused.gif" alt="">
+        <p>a device that changes the voltage or other characteristic of electrical energy as it moves from one circuit to another.</p>
+      </div>
+      <div class="text-popup">
+        <img src="images/confused.gif" alt="">
+        <p>compact power equipment commonly found in urban areas, that have three compartments consist Medium Voltage compartment tranformser compartment and Low voltage compartment.</p>
+      </div>
+      <div class="text-popup">
+        <img src="images/confused.gif" alt="">
+        <p>A large group of networked computer servers typically used by organizations for the remote storage, processing, or distribution of large amounts of data.</p>
+      </div>
+      <div class="text-popup">
+        <img src="images/confused.gif" alt="">
+        <p>using the energy from the sun to produce electric power</p>
+      </div>
+      <div class="text-popup">
+        <img src="images/confused.gif" alt="">
+        <p>a sheet metal duct or also cast resin insulated containing either copper or aluminium busbars for the purpose of conducting a substantial current of electricity.</p>
+      </div>
+      <div class="text-popup">
+        <img src="images/confused.gif" alt="">
+        <p>A dynamo or similar machine for converting mechanical energy into electricity.</p>
+      </div>
+      <div class="text-popup">
+        <img src="images/confused.gif" alt="">
+        <p>A device that automatically transfers a power supply from its primary source to a backup source when it senses a failure in the primary source.</p>
+      </div>
+      <div class="text-popup">
+        <img src="images/confused.gif" alt="">
+        <p>one of the most useful and simple instruments to measure electrical power when no deeper analysis of the measured data is required.</p>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      ส่งคำตอบ
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ยืนยันการส่งคำตอบ</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-primary" onclick="buttonsubmit()">ยืนยัน</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
